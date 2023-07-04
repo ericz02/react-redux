@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const users = useSelector((state) => state.users);
@@ -8,9 +9,12 @@ const Home = () => {
   return (
     <div className="container mx-auto p-4">
       <h2 className="text-4xl mb-8">CRUD App using JSON Server</h2>
-      <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mb-8">
-        Create +
-      </button>
+
+      <Link to={"/create"}>
+        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mb-8">
+          Create +
+        </button>
+      </Link>
 
       <table className="w-full">
         <thead>
