@@ -1,9 +1,12 @@
+import "./index.css"
+import Home from "./components/Home"
+
 function App() {
 
   return (
-    <div className="bg-blue-300">
-      hello world
-    </div>
+    <>
+      <Home />
+    </>
   )
   
 }

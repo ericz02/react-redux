@@ -4,6 +4,13 @@ import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 
 import App from './App.jsx'
+import UserReducer from './components/UserReducer.jsx'
+
+const store = configureStore({
+  reducer: {
+    user: UserReducer
+  }
+})
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
