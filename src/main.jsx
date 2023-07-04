@@ -8,7 +8,7 @@ import UserReducer from './components/UserReducer.jsx'
 
 const store = configureStore({
   reducer: {
-    user: UserReducer
+    users: UserReducer
   }
 })
 

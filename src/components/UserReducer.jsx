@@ -6,7 +6,7 @@ const userSlice = createSlice({
   // my understanding is that these are actions (name, initial state, and reducer)
 
   name: "users",
-  initialState: userList,     //imported from Data.jsx and assigned it to inital state
+  initialState: userList,
   reducers: {
     
   }
