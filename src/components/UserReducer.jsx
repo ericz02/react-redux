@@ -8,7 +8,9 @@ const userSlice = createSlice({
   name: "users",
   initialState: userList,
   reducers: {
-    
+    addUser: (state, action) => {
+      console.log(action)
+    }
   }
 
 })
