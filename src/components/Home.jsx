@@ -33,9 +33,11 @@ const Home = () => {
               <td className="border py-2 px-4">{user.name}</td>
               <td className="border py-2 px-4">{user.email}</td>
               <td className="border py-2 px-4">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
-                  Edit
-                </button>
+                <Link to={`/edit/${user.id}`}>
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
+                    Edit
+                  </button>
+                </Link>
 
                 <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                   Delete
