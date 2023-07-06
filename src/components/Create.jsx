@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { addUser } from './UserReducer';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Create = () => {
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const users = useSelector((state) => state.users)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
+    dispatch(addUser({ id: users[users.length - 1].id + 1, name, email }))
+    navigate('/')
   }
   
   return (
